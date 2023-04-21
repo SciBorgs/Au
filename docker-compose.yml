@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_DB: sciscout
+      POSTGRES_USER: warren
+      POSTGRES_PASSWORD: sciborgs1155
+    ports:
+      - 5432:5432
