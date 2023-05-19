@@ -5,15 +5,20 @@ import { SessionProvider } from "next-auth/react";
 import { api } from "~/utils/api";
 
 import "~/styles/globals.css";
+import { Nav } from "~/components/ui/Nav";
 
 const MyApp: AppType<{ session: Session | null }> = ({
   Component,
   pageProps: { session, ...pageProps },
 }) => {
   return (
-    <SessionProvider session={session}>
-      <Component {...pageProps} />
-    </SessionProvider>
+    <div className="text-white bg-zinc-900">
+      <SessionProvider session={session}>
+          <Nav />
+         {/* @ts-ignore  */}
+        <Component {...pageProps} />
+      </SessionProvider>
+    </div>
   );
 };
 
