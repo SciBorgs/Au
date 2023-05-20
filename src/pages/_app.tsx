@@ -15,6 +15,7 @@ const MyApp: AppType<{ session: Session | null }> = ({
     <div className="text-white bg-zinc-900">
       <SessionProvider session={session}>
           <Nav />
+          
          {/* @ts-ignore  */}
         <Component {...pageProps} />
       </SessionProvider>
